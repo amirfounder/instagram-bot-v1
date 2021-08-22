@@ -1,4 +1,10 @@
-class MySQLQueryFactory:
+from src.database_manager.abstracts.QueryFactory import QueryFactory
+from src.database_manager.data_structs.Column import Column
+from src.database_manager.data_structs.Database import Database
+from src.database_manager.data_structs.Table import Table
+
+
+class MySQLQueryFactory(QueryFactory):
   
   def __init__(self) -> None:
     pass

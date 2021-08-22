@@ -4,5 +4,9 @@ from abc import ABCMeta, abstractmethod
 class QueryFactory(metaclass = ABCMeta):
 
   @abstractmethod
-  def build_select_query() -> str:
+  def build_query():
+    pass
+
+  @abstractmethod
+  def build_statement():
     pass

@@ -1,17 +1,16 @@
 from abc import ABCMeta, abstractmethod
-from typing import Any
 
 
 class Connection(metaclass=ABCMeta):
 
   @abstractmethod
-  def connect(self, host, user, password, database) -> None:
+  def connect(self, host, user, password, database):
     pass
 
   @abstractmethod
-  def close(self) -> None:
+  def close(self):
     pass
 
   @abstractmethod
-  def execute(self, query) -> Any:
+  def execute(self, query):
     pass

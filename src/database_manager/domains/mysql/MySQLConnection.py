@@ -1,11 +1,12 @@
-from typing import Any
-from database_managers.interfaces.Connection import Connection
-from database_managers.entities.Database import Database
-from database_managers.entities.Column import Column
-from database_managers.entities.Table import Table
 import mysql.connector
+from typing import Any
 
-from database_managers.mysql.MySQLQueryFactory import MySQLQueryFactory
+from src.database_manager.abstracts.Connection import Connection
+from src.database_manager.data_structs.Database import Database
+from src.database_manager.data_structs.Column import Column
+from src.database_manager.data_structs.Table import Table
+from src.database_manager.domains.mysql.MySQLQueryFactory import MySQLQueryFactory
+
 
 class MySQLConnection(Connection):
 
