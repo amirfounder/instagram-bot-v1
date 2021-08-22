@@ -1,6 +1,7 @@
 from datetime import datetime
 from src.utils.FileWriter import FileWriter as fw
 from src.utils.FileSystem import FileSystem as fs
+from src.utils import utils
 
 
 class FileLogger:
@@ -81,15 +82,4 @@ class FileLogger:
     return content_size > self.max_file_size - file_size
   
   def pad_filename(self, filename):
-    return self.pad_string(str(filename), '0', 3, 'BEFORE')
-  
-  def pad_string(self, string, pad_char, length, position):
-    while len(string) < length:
-      if position.upper() == 'BEFORE':
-        string = pad_char + string
-      elif position.upper() == 'AFTER':
-        string += pad_char
-      else:
-        raise Exception(f'Unsupported position value: {position}')
-
-    return string
+    return utils.pad_string(str(filename), '0', 3, 'BEFORE')
