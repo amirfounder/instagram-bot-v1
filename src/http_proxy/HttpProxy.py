@@ -3,7 +3,6 @@ from src.utils.ConsoleLogger import ConsoleLogger
 from src.utils import utils
 
 
-
 class HttpProxy:
 
   def __init__(self) -> None:

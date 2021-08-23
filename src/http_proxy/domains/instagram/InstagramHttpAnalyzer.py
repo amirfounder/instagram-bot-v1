@@ -27,6 +27,7 @@ class InstagramHttpAnalyzer:
       self.console_logger.info(response)
       self.file_logger_responses.log({'response': response, 'metadata': metadata})
       self.console_logger.success(f'Successfully logged response to file')
+    
   
   def build_metadata(self, flow, timestamp):
     return {
