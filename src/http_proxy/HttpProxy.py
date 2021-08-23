@@ -3,6 +3,7 @@ from src.utils.ConsoleLogger import ConsoleLogger
 from src.utils import utils
 
 
+
 class HttpProxy:
 
   def __init__(self) -> None:
@@ -12,4 +13,4 @@ class HttpProxy:
 
   def response(self, flow):
     timestamp = utils.get_timestamp()
-    self.resposne_analyzers.handle_flow(flow, timestamp)
+    self.resposne_analyzers.handle_response_flow(flow, timestamp)

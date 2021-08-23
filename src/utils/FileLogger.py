@@ -2,13 +2,14 @@ from datetime import datetime
 from src.utils.FileWriter import FileWriter as fw
 from src.utils.FileSystem import FileSystem as fs
 from src.utils import utils
+from src.utils.constants import FILE_LOGGER_MAX_FILE_SIZE
 
 
 class FileLogger:
 
   def __init__(self, log_directory=None, max_file_size=None) -> None:
     self.log_directory = log_directory
-    self.max_file_size = max_file_size or 25 * 1000 * 1000
+    self.max_file_size = max_file_size or FILE_LOGGER_MAX_FILE_SIZE
     self.fw = fw()
   
   # Getters and setters
@@ -74,7 +75,7 @@ class FileLogger:
     return now.strftime("%Y_%m_%d")
 
   def is_content_greater_than_file(self, file_path, content):
-    content = fs.convert_to_string(content)
+    content = utils.convert_to_string(content)
 
     content_size = len(content)
     file_size = fs.get_file_size(file_path)

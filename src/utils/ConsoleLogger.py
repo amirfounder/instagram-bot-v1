@@ -64,7 +64,7 @@ class ConsoleLogger:
   
   def pad_log_section(self, string, section_length):
     if len(string) > section_length:
-      padded_string = utils.pad_string(string, '.', section_length - 3, 'AFTER')
+      padded_string = utils.pad_string(string[:146], '.', section_length - 4, 'AFTER')
       padded_string += '...'
     else:
       padded_string = utils.pad_string(string, '.', section_length - 1, 'AFTER')
