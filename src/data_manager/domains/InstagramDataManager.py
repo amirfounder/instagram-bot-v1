@@ -3,7 +3,7 @@ from src.utils.constants import MITM_PROXY_INSTAGRAM_REQUEST_LOG_DIRECTORY, MITM
 import time
 
 
-class InstagramFileToDataManager:
+class InstagramDataManager:
 
   def __init__(self) -> None:
     self.request_file_parser = FileParser()
@@ -16,12 +16,8 @@ class InstagramFileToDataManager:
     self.loop(10)
 
   def loop(self, seconds_between):
-
     time.sleep(seconds_between)
   
   def get_instagram_responses(self):
     responses = self.response_file_parser.get_contents_from_files_in_directory()
     return responses
-
-igdm = InstagramFileToDataManager()
-igdm.get_instagram_responses()
