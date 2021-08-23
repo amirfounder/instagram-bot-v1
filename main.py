@@ -1,13 +1,12 @@
-from src.database_manager.index import DatabaseManager
-from src.http_proxy.index import HttpProxy
+from src.database_manager.index import DatabaseManagerRunner
+from src.http_proxy.index import HttpProxyRunner
 from multiprocessing import Process
-import os
 
 
 def main():
 
-  p1 = Process(target=DatabaseManager.run)
-  p2 = Process(target=HttpProxy.run)
+  p1 = Process(name='DatabaseManager Process', target=DatabaseManagerRunner.run)
+  p2 = Process(name='HttpProxy Process', target=HttpProxyRunner.run)
 
   p1.start()
   p2.start()
@@ -15,5 +14,5 @@ def main():
   p1.join()
   p2.join()
 
-# if __name__ == '__main__':
-#   main()
+if __name__ == '__main__':
+  main()

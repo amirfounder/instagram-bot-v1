@@ -1,4 +1,4 @@
-import json
+from src.utils import utils
 from src.utils.FileSystem import FileSystem as fs
 
 
@@ -18,6 +18,6 @@ class FileWriter:
   # Write to file
 
   def write_to_file(self, content):
-    content = fs.convert_to_string(content)
+    content = utils.convert_to_string(content)
     with open(self.__file_path, 'a') as f:
       f.write(content + '\n')

@@ -1,4 +1,5 @@
 from datetime import datetime
+import json
 
 def pad_string(string, pad_char, length, position):
     while len(string) < length:
@@ -15,3 +16,8 @@ def pad_string(string, pad_char, length, position):
 def get_timestamp():
   now = datetime.now()
   return now.strftime("%Y-%m-%d %H:%M:%S.%f")[:23]
+
+def convert_to_string(content):
+    if type(content) is not str:
+      return json.dumps(content)
+    return content

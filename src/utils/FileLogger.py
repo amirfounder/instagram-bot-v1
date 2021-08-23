@@ -8,7 +8,7 @@ class FileLogger:
 
   def __init__(self, log_directory=None, max_file_size=None) -> None:
     self.log_directory = log_directory
-    self.max_file_size = max_file_size
+    self.max_file_size = max_file_size or 25 * 1000 * 1000
     self.fw = fw()
   
   # Getters and setters

@@ -16,12 +16,6 @@ class FileSystem:
   def get_file_size(file_path):
     return os.path.getsize(file_path)
   
-  @staticmethod
-  def convert_to_string(content):
-    if type(content) is not str:
-      return json.dumps(content)
-    return content
-
   # Extract
 
   @classmethod

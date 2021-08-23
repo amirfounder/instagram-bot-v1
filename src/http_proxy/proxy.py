@@ -1,5 +1,8 @@
-from src.http_proxy.domains.HttpSniffer import HttpSniffer
+import sys
+sys.path.append('C:\\Users\\Amir Sharapov\\Code\\amirfounder\\programs\\1')
+
+from src.http_proxy.HttpProxy import HttpProxy
 
 addons = [
-  HttpSniffer()
+  HttpProxy()
 ]
