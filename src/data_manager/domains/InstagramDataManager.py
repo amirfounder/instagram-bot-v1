@@ -1,23 +1,31 @@
+from src.database_manager.domains.mysql.MySQLConnection import MySQLConnection
 from src.utils.FileParser import FileParser
-from src.utils.constants import MITM_PROXY_INSTAGRAM_REQUEST_LOG_DIRECTORY, MITM_PROXY_INSTAGRAM_RESPONSE_LOG_DIRECTORY
+from src.utils.constants import MITM_PROXY_INSTAGRAM_LOG_DIRECTORY
 import time
+import json
 
 
 class InstagramDataManager:
 
   def __init__(self) -> None:
-    self.request_file_parser = FileParser()
-    self.response_file_parser = FileParser()
+    self.file_parser = FileParser()
+    self.file_parser.set_directory_path(MITM_PROXY_INSTAGRAM_LOG_DIRECTORY)
 
-    self.request_file_parser.set_directory_path(MITM_PROXY_INSTAGRAM_REQUEST_LOG_DIRECTORY)
-    self.response_file_parser.set_directory_path(MITM_PROXY_INSTAGRAM_RESPONSE_LOG_DIRECTORY)
+    self.mysql_connection = MySQLConnection()
+    self.mysql_connection.connect('localhost', 'root', 'root')
   
-  def main(self):
-    self.loop(10)
+  def transfer_file_data_to_mysql(self):
+    data = self.get_latest_file_data()
 
-  def loop(self, seconds_between):
-    time.sleep(seconds_between)
-  
-  def get_instagram_responses(self):
-    responses = self.response_file_parser.get_contents_from_files_in_directory()
+    hashtag_data = self.get_hashtags_from_data(data)
+    users_data = self.get_users_from_data(data)
+    posts_data = self.get_posts_from_data(data)
+
+    self.mysql_connection
+
+  def get_responses_from_file(self):
+    responses = self.file_parser.get_contents_from_files_in_directory()
     return responses
+  
+  def filter_responses(self, responses):
+    pass

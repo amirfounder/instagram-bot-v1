@@ -6,10 +6,10 @@ from src.utils import utils
 class HttpProxy:
 
   def __init__(self) -> None:
-    self.resposne_analyzers = HttpResponseAnalyzer()
+    self.response_analyzer = HttpResponseAnalyzer()
     self.console_logger = ConsoleLogger()
-    self.console_logger.success('Started sniffing. No errors', format=False)
+    self.console_logger.success('Started analyzing HTTP Requests / Responses')
 
   def response(self, flow):
     timestamp = utils.get_timestamp()
-    self.resposne_analyzers.handle_response_flow(flow, timestamp)
+    self.response_analyzer.handle_response_flow(flow, timestamp)
