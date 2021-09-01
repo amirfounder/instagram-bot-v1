@@ -1,7 +1,7 @@
 import os
 
 
-class HttpProxyRunner:
+class HttpProxy:
 
   @staticmethod
   def run():

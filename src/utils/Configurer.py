@@ -1,0 +1,1 @@
+# Todo: Setup configuration file to get the size of the terminal and call it in console logger

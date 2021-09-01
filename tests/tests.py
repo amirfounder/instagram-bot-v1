@@ -8,4 +8,10 @@ from src.data_manager.domains.InstagramDataManager import InstagramDataManager
 # Tests and sandbox mode here.
 
 igdm = InstagramDataManager()
-igdm.get_responses_from_file()
+responses = igdm.get_instagram_responses()
+filtered_responses = igdm.filter_responses(responses)
+grouped_responses = igdm.group_responses(filtered_responses)
+
+print(len(responses))
+print(len(filtered_responses))
+

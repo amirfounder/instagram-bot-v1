@@ -1,4 +1,4 @@
-class ContentFactoryRunner:
+class ContentFactory:
 
   @staticmethod
   def run():

@@ -1,8 +1,11 @@
-from src.data_manager.DataManager import DataManager
+from data_manager.domains.InstagramDataManager import InstagramDataManager
 
 
 class DataManagerRunner:
 
   @staticmethod
   def run():
-    DataManager.run()
+    InstagramDataManager.run()
+
+
+    
