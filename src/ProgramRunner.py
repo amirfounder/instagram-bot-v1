@@ -1,27 +1,21 @@
-from os import stat
-from src.database_manager.index import DatabaseManagerRunner
-from src.http_proxy.index import HttpProxyRunner
+from src.database_manager.index import DatabaseManager
+from src.http_proxy.index import HttpProxy
 from multiprocessing import Process
 
 class ProgramRunner:
+
+  runners = [
+    DatabaseManager.run,
+    HttpProxy.run
+  ]
 
   # Main
 
   @classmethod
   def run(self):
-    self.research()
+    self.run_processes(self.runners)
 
-  # Specialized Processes
-
-  @classmethod
-  def research(self):
-    runners = [
-      DatabaseManagerRunner.run,
-      HttpProxyRunner.run
-    ]
-    self.run_processes(runners)
-
-  # Helpers
+  # Helper
 
   @staticmethod
   def run_processes(runners):

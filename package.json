@@ -1,0 +1,23 @@
+{
+  "name": "1",
+  "version": "1.0.0",
+  "description": "Program 1",
+  "main": "main.py",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amirfounder/1.git"
+  },
+  "author": "Amir Sharapov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amirfounder/1/issues"
+  },
+  "homepage": "https://github.com/amirfounder/1#readme"
+}
