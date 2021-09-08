@@ -4,7 +4,7 @@ Usage of javascript to generate the content on the dom.
 
 Current design steps:
 
-Python uses AI + algo to determine content to fetch and render into the DOM.
+Python uses AI + algo to determine content to fetch and render into the DOM. (Text + Image)
 Python updates input values based on algo.
 Python triggers JS algo through button click:
 

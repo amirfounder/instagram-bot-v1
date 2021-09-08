@@ -94,8 +94,8 @@ test_dict = {
 builder = SkeletonBuilder()
 skeleton = builder.build(test_dict)
 
-object1 = {'blue': 'green'}
-object2 = {'blue': 'yellow'}
+object1 = {'blue': 'green', 'person': {'name': 'jack'}}
+object2 = {'blue': 'yellow', 'person': {'name': 'bob'}}
 
 skeleton1 = builder.build(object1)
 skeleton2 = builder.build(object2)
