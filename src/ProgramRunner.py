@@ -1,19 +1,26 @@
+from src.content_factory.index import ContentFactory
 from src.database_manager.index import DatabaseManager
 from src.http_proxy.index import HttpProxy
 from multiprocessing import Process
 
 class ProgramRunner:
 
-  runners = [
-    DatabaseManager.run,
-    HttpProxy.run
+  content_creation_runners = [
+    ContentFactory.run_flask_server,
+    ContentFactory.run_react_server,
   ]
+
+  research_runners = [
+    HttpProxy.run,
+    DatabaseManager.run
+  ]
+
 
   # Main
 
   @classmethod
   def run(self):
-    self.run_processes(self.runners)
+    self.run_processes(self.content_creation_runners)
 
   # Helper
 
