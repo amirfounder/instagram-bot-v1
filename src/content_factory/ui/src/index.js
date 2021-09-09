@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css'
-import { ContentContainer } from './components/ContentContainer';
+import { Container } from './components/Container';
 
 ReactDOM.render(
   <React.StrictMode>
     <div>
-      <ContentContainer />
+      <Container />
     </div>
   </React.StrictMode>,
   document.getElementById('root')

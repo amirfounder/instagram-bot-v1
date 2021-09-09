@@ -1,0 +1,8 @@
+.main {
+  border: 5px solid rgb(0, 255, 0);
+  width: calc(100vh - 10px);
+  height: calc(100vh - 10px);
+  display: grid;
+  grid-template-columns: var(--graphic-side-padding) repeat(100, 1fr) var(--graphic-side-padding);
+  grid-template-rows: var(--graphic-side-padding) repeat(100, 1fr) var(--graphic-side-padding);
+}

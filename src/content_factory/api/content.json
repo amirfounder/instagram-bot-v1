@@ -1,10 +1,70 @@
-{
-  "quote": {
-    "content": "Boss Up. Level up",
-    "position": "top right"
+[
+  {
+    "content": {
+      "text": [
+        {"value": "Never", "color": "accent", "type": "word"},
+        {"value": "Give", "color": "primary", "type": "word"},
+        {"value": "Up ", "color": "primary", "type": "word"},
+        {"value": ".", "color": "primary", "type": "punctuation"}
+      ],
+      "position": {
+        "gridArea": 16,
+        "vertical": {
+          "start": 1,
+          "end": 3
+        },
+        "horizontal": {
+          "start": 0,
+          "end": 4
+        }
+      },
+      "styles": {
+        "font": {
+          "family": "Roboto",
+          "size": "Large"
+        },
+        "colors": {
+          "primary": "white",
+          "accent": "blue"
+        }
+      }
+    },
+    "background": {
+      "type": "image",
+      "value": "https://cdn.pixabay.com/photo/2021/08/27/10/16/baby-6578335_960_720.jpg"
+    }
   },
-  "styles": {
-    "font-family": "Roboto"
-  },
-  "backgroundImage": "https://cdn.pixabay.com/photo/2021/08/27/10/16/baby-6578335_960_720.jpg"
-}
+  {
+    "background": {
+      "type": "color",
+      "value": "#ffffff"
+    },
+    "content": [
+      {
+        "type": "text",
+        "value": [
+          {"value": "Never", "color": "accent", "type": "word"},
+          {"value": "Give", "color": "primary", "type": "word"},
+          {"value": "Up", "color": "primary", "type": "word"},
+          {"value": ".", "color": "primary", "type": "symbol"}
+        ],
+        "styles": {
+          "font": {
+            "colors": {
+              "primary": "white",
+              "accent": "blue"
+            },
+            "size": "16px",
+            "lineHeight": "1.4em"
+          }
+        }
+      },
+      {
+        "content": {
+          "type": "image",
+          "value": "https://cdn.pixabay.com/photo/2021/08/27/10/16/baby-6578335_960_720.jpg"
+        }
+      }
+    ]
+  }
+]

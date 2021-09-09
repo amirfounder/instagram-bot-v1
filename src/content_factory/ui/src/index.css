@@ -1,7 +1,7 @@
-body {
-  margin: 0px;
+:root {
+  --graphic-side-padding: 50px;
 }
 
-.main {
-  background-color: black;
+body {
+  margin: 0px;
 }
